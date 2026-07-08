@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, Download, Mail, Github, Linkedin } from 'lucide-react'
+import { ArrowRight, Download, Mail, Github, Linkedin, FileText } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useRef } from 'react'
 import Image from 'next/image'
@@ -104,10 +104,10 @@ export function HeroSection() {
                   <ArrowRight className="ml-1.5 h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
-              <a href="#contact">
+              <a href="https://docs.google.com/document/d/18snFZHvv9ANnEXqFcu-wV6clgzjH5eBQooCNBYLXuXY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <Button size="sm" variant="glass" className="text-xs sm:text-sm">
-                  <Mail className="mr-1.5 h-3.5 w-3.5" />
-                  Contact
+                  <FileText className="mr-1.5 h-3.5 w-3.5" />
+                  Resume
                 </Button>
               </a>
               <a href="https://wa.me/8801904229243" target="_blank" rel="noopener noreferrer">
