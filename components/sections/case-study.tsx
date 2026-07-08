@@ -3,7 +3,8 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { CheckCircle2, TrendingUp, Zap, Shield } from 'lucide-react'
+import { CheckCircle2, TrendingUp, Zap, Shield, Play } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 const caseStudyData = {
   title: 'Quranity - Modern Islamic Digital Experience',
@@ -37,33 +38,7 @@ const caseStudyData = {
       icon: Shield,
     },
   ],
-  architecture: {
-    pattern: 'Clean Architecture with Modern State Management',
-    layers: ['Presentation Layer (Cinematic UI)', 'Domain Layer (Content & AI Logic)', 'Data Layer (Multi-source Integration)'],
-    stateManagement: 'Reactive state management for seamless experience',
-    database: 'Hybrid storage: SQLite + Cloud for offline-first approach',
-  },
-  apiIntegration: [
-    'Qalam AI integration for educational Q&A',
-    'Video streaming service for cinematic stories',
-    'Qur\'an API for reading and learning tools',
-    'Firebase for analytics and content delivery',
-    'Custom backend for Shorts and content management',
-  ],
-  performance: [
-    'Smooth video playback with adaptive streaming',
-    'Instant content loading with smart caching',
-    'Minimal battery consumption during extended use',
-    'Optimized for low-end devices',
-    'Distraction-free, intentional user flow',
-  ],
-  deployment: [
-    'Continuous content updates via Firebase',
-    'A/B testing for user experience optimization',
-    'Automated quality checks for Islamic content accuracy',
-    'Beta testing with Muslim community feedback',
-    'Regular updates guided by Islamic values',
-  ],
+
   impact: [
     'Helping Muslims reconnect with faith',
     'Modern Islamic digital experience',
@@ -107,8 +82,16 @@ export function CaseStudy() {
               <CardHeader>
                 <CardTitle className="text-3xl">{caseStudyData.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-6">
                 <p className="text-lg text-muted-foreground">{caseStudyData.overview}</p>
+                <div className="flex flex-wrap gap-4 pt-2">
+                  <a href="https://play.google.com/store/apps/details?id=com.quranityllc.quranity&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" variant="outline" className="text-base h-12 px-6">
+                      <Play className="mr-2 h-5 w-5 fill-current" />
+                      Get it on Google Play
+                    </Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
           </motion.div>
@@ -186,115 +169,6 @@ export function CaseStudy() {
             </Card>
           </motion.div>
 
-          {/* Architecture */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl">App Architecture</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Pattern</h4>
-                  <p className="text-muted-foreground">{caseStudyData.architecture.pattern}</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Architecture Layers</h4>
-                  <div className="space-y-2">
-                    {caseStudyData.architecture.layers.map((layer, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-purple-500" />
-                        <span className="text-muted-foreground">{layer}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="font-semibold mb-2">State Management</h4>
-                    <p className="text-muted-foreground">{caseStudyData.architecture.stateManagement}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">Database</h4>
-                    <p className="text-muted-foreground">{caseStudyData.architecture.database}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          {/* API Integration */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl">API Integration</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-2 gap-3">
-                  {caseStudyData.apiIntegration.map((api, i) => (
-                    <div key={i} className="flex items-center gap-2 glass p-3 rounded-lg">
-                      <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-sm">{api}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          {/* Performance & Deployment */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.7 }}
-            >
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Performance Metrics</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {caseStudyData.performance.map((metric, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm">
-                        <span className="text-cyan-400">▸</span>
-                        <span className="text-muted-foreground">{metric}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Deployment Process</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {caseStudyData.deployment.map((step, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm">
-                        <span className="text-purple-400">▸</span>
-                        <span className="text-muted-foreground">{step}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
 
           {/* Impact */}
           <motion.div

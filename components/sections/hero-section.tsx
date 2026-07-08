@@ -88,7 +88,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mb-4 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              I have 1 year of experience in Flutter app development and also worked on native Android app development using Kotlin and Java. I&apos;ve been a content creator since 2019, with expertise in video editing, web development, and WordPress.
+              I am a passionate Flutter Developer with over a year of experience building beautiful, high-performance cross-platform applications. I specialize in creating clean architectures, smooth UI/UX, and also have experience in native Android development using Kotlin and Java.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -160,15 +160,15 @@ export function HeroSection() {
             </div>
 
             {/* Image Container */}
-            <div className="relative z-10">
-              <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
+            <div className="relative z-10 w-full">
+              <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[400px] lg:max-w-[480px] aspect-square mx-auto">
 
                 {/* Profile Image */}
                 <Image
-                  src="/profile.png"
-                  alt="Nahid Hasan"
+                  src="/hero-illustration-transparent.png"
+                  alt="Developer at Desk Illustration"
                   fill
-                  className="object-cover rounded-full"
+                  className="object-contain drop-shadow-2xl"
                   priority
                 />
 

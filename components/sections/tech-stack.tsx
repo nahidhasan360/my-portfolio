@@ -6,64 +6,36 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 const techCategories = [
   {
-    category: 'Mobile Development',
+    category: 'Cross-platform App Development',
     color: 'from-blue-500 to-cyan-500',
     technologies: [
-      { name: 'Flutter', level: 85 },
-      { name: 'Dart', level: 85 },
-      { name: 'GetX', level: 80 },
-      { name: 'Kotlin', level: 75 },
-      { name: 'Java', level: 70 },
+      { name: 'Flutter', level: 75 },
+      { name: 'Dart', level: 75 },
+      { name: 'GetX', level: 65 },
+      { name: 'Riverpod', level: 60 },
+      { name: 'Firebase', level: 65 },
     ],
   },
   {
-    category: 'Native Android',
+    category: 'Native App Development',
     color: 'from-green-500 to-emerald-500',
     technologies: [
-      { name: 'Kotlin', level: 75 },
-      { name: 'Java', level: 70 },
-      { name: 'Android SDK', level: 75 },
-      { name: 'Material Design', level: 80 },
-    ],
-  },
-  {
-    category: 'Backend & APIs',
-    color: 'from-purple-500 to-pink-500',
-    technologies: [
-      { name: 'Firebase', level: 80 },
-      { name: 'REST APIs', level: 75 },
-      { name: 'Node.js', level: 65 },
-      { name: 'MongoDB', level: 60 },
+      { name: 'Kotlin', level: 55 },
+      { name: 'Java', level: 50 },
+      { name: 'Android SDK', level: 55 },
+      { name: 'Material Design', level: 65 },
     ],
   },
   {
     category: 'Web Development',
     color: 'from-orange-500 to-red-500',
     technologies: [
-      { name: 'WordPress', level: 80 },
-      { name: 'HTML/CSS', level: 85 },
-      { name: 'JavaScript', level: 75 },
-      { name: 'Responsive Design', level: 85 },
-    ],
-  },
-  {
-    category: 'Content Creation',
-    color: 'from-yellow-500 to-orange-500',
-    technologies: [
-      { name: 'Video Editing', level: 90 },
-      { name: 'Adobe Premiere Pro', level: 85 },
-      { name: 'Content Strategy', level: 85 },
-      { name: 'Social Media', level: 90 },
-    ],
-  },
-  {
-    category: 'Languages',
-    color: 'from-indigo-500 to-purple-500',
-    technologies: [
-      { name: 'Bangla', level: 100 },
-      { name: 'English', level: 85 },
-      { name: 'German', level: 60 },
-      { name: 'Technical Writing', level: 80 },
+      { name: 'Next.js', level: 60 },
+      { name: 'React', level: 65 },
+      { name: 'TypeScript', level: 55 },
+      { name: 'Tailwind CSS', level: 70 },
+      { name: 'Node.js', level: 45 },
+      { name: 'HTML/CSS', level: 80 },
     ],
   },
 ]
@@ -149,25 +121,17 @@ export function TechStack() {
             <CardContent>
               <div className="flex flex-wrap justify-center gap-3">
                 {[
-                  'Flutter Development',
-                  'Dart Programming',
-                  'GetX State Management',
-                  'Riverpod',
-                  'Bloc Pattern',
-                  'Kotlin',
-                  'Java',
-                  'Native Android',
-                  'Material Design',
-                  'Firebase',
-                  'REST APIs',
-                  'WordPress',
-                  'Web Development',
+                  'CapCut',
+                  'Filmora',
+                  'Adobe Photoshop',
+                  'After Effects',
                   'Video Editing',
                   'Content Creation',
+                  'Basic Motion Graphics',
                   'UI/UX Design',
                   'Git & GitHub',
                   'Responsive Design',
-                  'Cross-platform Development',
+                  'Problem Solving',
                 ].map((skill, i) => (
                   <motion.span
                     key={skill}

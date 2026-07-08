@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Github, Smartphone } from 'lucide-react'
+import { Github, Smartphone, Play } from 'lucide-react'
 import Image from 'next/image'
 
 const projects = [
@@ -19,6 +19,7 @@ const projects = [
     performance: 'Immersive experience with calm, intentional design',
     links: {
       github: 'https://github.com/nahidhasan360/quranity_app_v1',
+      playStore: 'https://play.google.com/store/apps/details?id=com.quranityllc.quranity&pcampaignid=web_share',
     }
   },
   {
@@ -227,6 +228,14 @@ export function FeaturedApps() {
 
                   {/* Links - pushed to bottom */}
                   <div className="flex flex-wrap gap-2 pt-4 mt-auto">
+                    {(project.links as any).playStore && (
+                      <a href={(project.links as any).playStore} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" variant="outline">
+                          <Play className="mr-2 h-4 w-4 fill-current" />
+                          Play Store
+                        </Button>
+                      </a>
+                    )}
                     {project.links.github && project.links.github !== '#' ? (
                       <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                         <Button size="sm" variant="outline">

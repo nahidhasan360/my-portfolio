@@ -4,11 +4,8 @@ import { motion, useInView } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
 
 const stats = [
-  { label: 'Months Experience', value: 10, suffix: '+' },
-  { label: 'Apps Built', value: 8, suffix: '+' },
-  { label: 'Years Content Creation', value: 5, suffix: '+' },
+  { label: 'Years Experience', value: 1, suffix: '+' },
   { label: 'Projects Completed', value: 12, suffix: '+' },
-  { label: 'Videos Edited', value: 100, suffix: '+' },
   { label: 'Client Satisfaction', value: 100, suffix: '%' },
 ]
 
@@ -69,7 +66,7 @@ export function Stats() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
