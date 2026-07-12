@@ -57,7 +57,7 @@ export function Testimonials() {
   return (
     <section className="py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent" />
-      
+
       <div ref={ref} className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -85,14 +85,14 @@ export function Testimonials() {
                 <div className="absolute top-4 right-4 opacity-10">
                   <Quote className="w-16 h-16" />
                 </div>
-                
+
                 <CardContent className="pt-6">
                   {/* Avatar & Info */}
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-cyan-500 p-0.5">
                       <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
-                        <img 
-                          src={testimonial.avatar} 
+                        <img
+                          src={testimonial.avatar}
                           alt={testimonial.name}
                           className="w-full h-full object-cover"
                         />

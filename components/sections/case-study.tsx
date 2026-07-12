@@ -3,7 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { CheckCircle2, TrendingUp, Zap, Shield, Play } from 'lucide-react'
+import { CheckCircle2, TrendingUp, Zap, Shield, Play, Apple } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const caseStudyData = {
@@ -89,6 +89,12 @@ export function CaseStudy() {
                     <Button size="lg" variant="outline" className="text-base h-12 px-6">
                       <Play className="mr-2 h-5 w-5 fill-current" />
                       Get it on Google Play
+                    </Button>
+                  </a>
+                  <a href="https://apps.apple.com/us/app/quranity/id6764633566" target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" variant="outline" className="text-base h-12 px-6">
+                      <Apple className="mr-2 h-5 w-5 fill-current" />
+                      Download on App Store
                     </Button>
                   </a>
                 </div>

@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Github, Smartphone, Play } from 'lucide-react'
+import { Github, Smartphone, Play, Apple } from 'lucide-react'
 import Image from 'next/image'
 
 const projects = [
@@ -18,8 +18,8 @@ const projects = [
     architecture: 'Clean Architecture with GetX State Management',
     performance: 'Immersive experience with calm, intentional design',
     links: {
-      github: 'https://github.com/nahidhasan360/quranity_app_v1',
       playStore: 'https://play.google.com/store/apps/details?id=com.quranityllc.quranity&pcampaignid=web_share',
+      appStore: 'https://apps.apple.com/us/app/quranity/id6764633566',
     }
   },
   {
@@ -236,18 +236,28 @@ export function FeaturedApps() {
                         </Button>
                       </a>
                     )}
-                    {project.links.github && project.links.github !== '#' ? (
-                      <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                    {(project.links as any).appStore && (
+                      <a href={(project.links as any).appStore} target="_blank" rel="noopener noreferrer">
                         <Button size="sm" variant="outline">
+                          <Apple className="mr-2 h-4 w-4 fill-current" />
+                          App Store
+                        </Button>
+                      </a>
+                    )}
+                    {project.links.github && (
+                      project.links.github !== '#' ? (
+                        <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                          <Button size="sm" variant="outline">
+                            <Github className="mr-2 h-4 w-4" />
+                            GitHub
+                          </Button>
+                        </a>
+                      ) : (
+                        <Button size="sm" variant="outline" disabled>
                           <Github className="mr-2 h-4 w-4" />
                           GitHub
                         </Button>
-                      </a>
-                    ) : (
-                      <Button size="sm" variant="outline" disabled>
-                        <Github className="mr-2 h-4 w-4" />
-                        GitHub
-                      </Button>
+                      )
                     )}
                   </div>
                 </CardContent>
